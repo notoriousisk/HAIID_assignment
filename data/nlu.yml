@@ -1,0 +1,107 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - what are you?
+    - who are you?
+    - are you a real person?
+    - you're a bot?
+    - you are a human?
+
+- intent: create_account
+  examples: |
+    - I want to create a bank account
+    - i want to open a bank account
+    - How can I create a new bank account?
+    - Tell me about opening a new account
+    - What are the steps to create a bank account?
+    - How can I open a bank account?
+    - Can I open a bank account online?
+    - What are the requirements for opening a bank account?
+    - How long does it take to open a bank account?
+
+- intent: account_type
+  examples: |
+    - What types of bank accounts are available?
+    - What are the different types of bank accounts?
+    - which types of bank accounts are available?
+    - can you tell me about the different types of bank accounts?
+    - can i open a [savings](account_type) account?
+    - can i open a [checking](account_type) account?
+
+- intent: identification_document
+  examples: |
+    - What documents do I need to open a bank account?
+    - What documents are required to open a bank account?
+    - Do i need an [ID](identification_document) to open a bank account?
+    - Do i need a [passport](identification_document) to open a bank account?
+    - i have a [passport](identification_document) is it enough?
+    - can i open a bank account with a [passport](identification_document)?
+    - is it possible to open a bank account with a [driver's license](identification_document)?
+
+- intent: initial_deposit
+  examples: |
+    - Do I need an initial deposit to open a bank account?
+    - How much money do I need to open a bank account?
+    - Is there a minimum deposit to open a bank account?
+    - Do i pay a fee to open a bank account?
+    - How much does it cost to open a bank account?
+
+- intent: talk_to_human
+  examples: |
+    - I want to talk to the manager
+    - You did not help me
+    - I have a complaint
+    - I want to talk to your boss
+    - I want to talk to a human
+    - I don't like your service
+    - person
+    - human
+    - get lost
+    - get out
+    - get me your boss
+    - I want to talk to a person
+    - how can i talk to a human?
+    - how can i talk to a real person?
+
+- intent: supply_contact_info
+  examples: |
+    - My name is [John](name). Phone number is [1234567890](phone_number).
+    - name: [David](name) phone number: [8912345777](phone_number)
+    - [Iskander](name) [+1234567890](phone_number)
+    - Yeah sure. I'm [Barbara](name). My phone number is [+1234567890](phone_number)
+    - I'm [Mark](name) and my phone number is [+446664432235](phone_number)

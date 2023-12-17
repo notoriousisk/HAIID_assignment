@@ -1,0 +1,83 @@
+version: "3.1"
+
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+  - greet
+  - goodbye
+  - bot_challenge
+  - create_account
+  - account_type
+  - identification_document
+  - initial_deposit
+  - talk_to_human
+  - supply_contact_info
+
+responses:
+  utter_greet:
+  - text: "Hi! How can I help you?"
+
+  utter_goodbye:
+  - text: "Hope I was able to help you. Bye!"
+
+  utter_iamabot:
+  - text: "I am a bot to guide you through the process of creating a bank account. \n What would you like to know?"
+
+  utter_create_account:
+  - text: "To create a new bank account, you'll need to follow these steps: \n
+    1. Choose the type of account you want to open. \n
+    2. Gather your identification documents. \n
+    3. Visit our nearest branch. \n
+    4. Provide the necessary information and make the initial deposit. \n
+    5. Congratulations! Your account is now open. \n
+    Please provide your contact information and our manager will get in touch with you shortly. \n
+    Or would you like to know anything else?" 
+  
+  utter_account_type:
+  - text: "We offer two types of bank accounts: Savings Account and Checking Account. \n
+    Savings Account: A savings account is a deposit account that generally earns higher interest than an interest-bearing checking account. \n
+    Checking Account: A checking account is a deposit account held at a financial institution that allows withdrawals and deposits. \n
+    Do you want to know anything else?"
+
+  utter_identification_document:
+  - text: "You'll need to provide a valid ID proof to open a bank account. You can use any of the following documents: Passport, ID, Driver's License, etc."
+
+  utter_initial_deposit:
+  - text: "You'll need to make an initial deposit minimum of $60 to open a bank account."
+
+  utter_talk_to_human:
+  - text: "Please provide your contact information and our manager will get in touch with you shortly."
+
+  utter_contact_info:
+  - text: "Thank you! Our customer service representative will get in touch with you shortly."
+
+  utter_default:
+  - text: "Sorry, I didn't get that. Can you please rephrase your question?"
+  
+entities:
+  - name
+  - phone_number
+  - account_type
+  - identification_document
+
+slots:
+  name:
+    type: any
+    mappings: []
+
+  phone_number:
+    type: any
+    mappings: []
+
+  account_type:
+    type: any
+    mappings: []
+
+  identification_document:
+    type: any
+    mappings: []
+

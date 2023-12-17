@@ -1,0 +1,127 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: create_account
+  - action: utter_create_account
+  - intent: supply_contact_info
+    entities:
+      - name: "David"
+      - phone_number: "+442222222222"
+  - action: utter_contact_info
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: talk_to_human
+  - action: utter_talk_to_human
+  - intent: supply_contact_info
+    entities:
+      - name: "Marina"
+      - phone_number: "81234567890"
+  - action: utter_contact_info
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: create_account
+  - action: utter_create_account
+  - intent: account_type
+  - action: utter_account_type
+  - intent: identification_document
+  - action: utter_identification_document
+  - intent: initial_deposit
+  - action: utter_initial_deposit
+  - intent: supply_contact_info
+    entities:
+      - name: "Andrew"
+      - phone_number: "11234567890"
+  - action: utter_contact_info
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: path 3
+  steps:
+  - intent: account_type
+  - action: utter_account_type
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: path 4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: identification_document
+  - action: utter_identification_document
+  - intent: account_type
+  - action: utter_account_type
+  - intent: initial_deposit
+  - action: utter_initial_deposit
+  - intent: supply_contact_info
+  - action: utter_contact_info
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: path 5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: identification_document
+  - action: utter_identification_document
+  - intent: initial_deposit
+  - action: utter_initial_deposit
+  - intent: account_type
+  - action: utter_account_type
+  - intent: supply_contact_info
+    entities:
+      - name: "John"
+      - phone_number: "+1234567890"
+  - action: utter_contact_info
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: path 6
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: create_account
+  - action: utter_create_account
+  - intent: account_type
+  - action: utter_account_type
+  - intent: supply_contact_info
+    entities:
+      - name: "John Doe"
+      - phone_number: "1234567890"
+  - action: utter_contact_info
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: path 7
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: create_account
+  - action: utter_create_account
+  - intent: supply_contact_info
+  - action: utter_contact_info
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: path 8
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: talk_to_human
+  - action: utter_talk_to_human
